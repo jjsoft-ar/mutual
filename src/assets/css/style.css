@@ -318,7 +318,7 @@ li {
 }
 
 .header-uper {
-  padding: 40px 0px;
+  padding: 0px 0px;
 }
 
 .header-uper .logo {
@@ -327,6 +327,7 @@ li {
 
 .header-uper .right-side {
   float: right;
+  padding: 20px 0px;
 }
 
 @media (max-width: 991px) {
