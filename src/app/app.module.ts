@@ -14,6 +14,12 @@ import { ComerciosComponent } from './pages/comercios/comercios.component';
 import { NovedadesComponent } from './pages/novedades/novedades.component';
 import { NoticiaComponent } from './pages/noticia/noticia.component';
 
+
+// Import your library
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TurnoComponent } from './pages/turno/turno.component';
+import { PromosComponent } from './pages/promos/promos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +32,14 @@ import { NoticiaComponent } from './pages/noticia/noticia.component';
     InicioComponent,
     ComerciosComponent,
     NovedadesComponent,
-    NoticiaComponent
+    NoticiaComponent,
+    TurnoComponent,
+    PromosComponent
   ],
   imports: [
     BrowserModule,
+    // Specify your library as an import
+    SlickCarouselModule,
     AppRoutingModule
   ],
   providers: [],

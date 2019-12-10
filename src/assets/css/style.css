@@ -220,7 +220,7 @@ li {
 }
 
 .single-page-header {
-  background-image: url("../images/about/about-header.jpg");
+  background-image: url("../assets/images/about/about-header.jpg");
   background-size: cover;
   padding: 140px 0 70px;
   text-align: center;
@@ -1886,7 +1886,7 @@ li {
   width: 100%;
   padding: 10px 20px;
   border: 1px solid #ececec;
-  background: #f4f4f4 url(../images/icons/icon-select.png) right center no-repeat;
+  background: #f4f4f4 url(../assets/images/icons/icon-select.png) right center no-repeat;
   cursor: pointer;
 }
 
@@ -2539,7 +2539,7 @@ li {
 .promo-video {
   position: relative;
   padding: 150px 0;
-  background: url("../images/background/promo-video.jpg");
+  background: url("../assets/images/background/promo-video.jpg");
   background-size: cover;
   background-position: center center;
 }

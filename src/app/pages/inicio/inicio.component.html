@@ -1,62 +1,153 @@
 <!--=================================
 =            Page Slider            =
 ==================================-->
-<div class="hero-slider">
-    <!-- Slider Item -->
-    <div class="slider-item slide1" style="background-image:url(assets/images/services/ayuda-economica.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Slide Content Start -->
-                    <div class="content style text-center">
-                        <h2 class="text-white text-bold mb-2">Ayudas Económicas</h2>
-                        <p class="tag-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sunt animi
-                            sequi ratione quod at earum. <br>
-                            Quis quos officiis numquam!</p>
-                        <a href="#" class="btn btn-main btn-white">Consultar</a>
+
+<ngx-slick-carousel class="hero-slider" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig" 
+    (init)="slickInit($event)"
+    (breakpoint)="breakpoint($event)" 
+    (afterChange)="afterChange($event)" 
+    (beforeChange)="beforeChange($event)">
+    
+    <div ngxSlickItem *ngFor="let slide of slides" >
+        <!-- Slider Item -->
+        <div class="slider-item" style="background-image:url(assets/images/slider/slider-bg-2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Slide Content Start-->
+                        <div class="content style text-right">
+                            <h2 class="text-white">{{ slide.text }}</h2>
+                            <p class="tag-text">{{ slide.tag }} </p>
+                            <a href="{{ slide.link }}" class="btn btn-main btn-white">{{ slide.button }}</a>
+                        </div>
+                        <!-- Slide Content End-->
                     </div>
-                    <!-- Slide Content End -->
                 </div>
             </div>
         </div>
+        <!-- Slider Item -->
     </div>
-    <!-- Slider Item -->
-    <div class="slider-item" style="background-image:url(assets/images/slider/slider-bg-2.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Slide Content Start-->
-                    <div class="content style text-right">
-                        <h2 class="text-white">We Care About <br>Your Health</h2>
-                        <p class="tag-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                        <a href="#" class="btn btn-main btn-white">about us</a>
-                    </div>
-                    <!-- Slide Content End-->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Slider Item -->
-    <div class="slider-item" style="background-image:url(assets/images/slider/slider-bg-3.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Slide Content Start -->
-                    <div class="content text-center style">
-                        <h2 class="text-white text-bold mb-2">Best Medical Services</h2>
-                        <p class="tag-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                            deserunt,
-                            <br>eius pariatur minus itaque nostrum.</p>
-                        <a href="shop.html" class="btn btn-main btn-white">shop now</a>
-                    </div>
-                    <!-- Slide Content End -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</ngx-slick-carousel>
 
 <!--====  End of Page Slider  ====-->
+
+<section class="cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="cta-block">
+                    <div class="emmergency item">
+                        <i class="fa fa-phone"></i>
+                        <h2>Consultas</h2>
+                        <a href="#">(0342) 4602049 / 4692460</a>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="top-doctor item">
+                        <i class="fa fa-stethoscope"></i>
+                        <h2>24 Houras al Servicio</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore dignissimos officia dicta
+                            suscipit vel eum</p>
+                        <a href="#" class="btn btn-main">Read more</a>
+                    </div>
+                    <div class="working-time item">
+                        <i class="fa fa-hourglass-o"></i>
+                        <h2>Horario de Atención</h2>
+                        <ul class="w-hours">
+                            <li>Lu - Vi - <span>08:30 - 12:30</span></li>
+                            <li>Lu - Vi - <span>16:30 - 20:00</span></li>
+                            <li>Sa - Do - <span>CERRADO</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--about section-->
+<section class="feature-section section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12">
+                <div class="image-content">
+                    <div class="section-title text-center">
+                        <h3>Características
+                            <span>de la Mutual</span>
+                        </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis <br>
+                            nam error officia vero tempora alias? Sunt?</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <div class="icon-box">
+                                    <figure>
+                                        <a href="#">
+                                            <img src="assets/images/resource/1.png" alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <h6>Ayudas Económicas</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo
+                                    quibusdam pariatur ex sunt, est aspernatur
+                                    at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <div class="icon-box">
+                                    <figure>
+                                        <a href="#">
+                                            <img src="assets/images/resource/2.png" alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <h6>Subsidios</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo
+                                    quibusdam pariatur ex sunt, est aspernatur
+                                    at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <div class="icon-box">
+                                    <figure>
+                                        <a href="#">
+                                            <img src="assets/images/resource/3.png" alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <h6>Asesoría Legal y Contable</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo
+                                    quibusdam pariatur ex sunt, est aspernatur
+                                    at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="item">
+                                <div class="icon-box">
+                                    <figure>
+                                        <a href="#">
+                                            <img src="assets/images/resource/4.png" alt="">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <h6>Servicios Médicos</h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo
+                                    quibusdam pariatur ex sunt, est aspernatur
+                                    at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End about section-->
 
 <!--Service Section-->
 <section class="service-section bg-gray section">
@@ -69,104 +160,36 @@
                 <br>
                 fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
         </div>
-        <div class="row items-container clearfix">
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/1.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Dormitory</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/2.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Germs Protection</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
+
+        <ngx-slick-carousel class="row items-container clearfix"
+            #slickModal="slick-carousel" 
+            [config]="serviceConfig" 
+            (init)="slickInit($event)"
+            (breakpoint)="breakpoint($event)" 
+            (afterChange)="afterChange($event)" 
+            (beforeChange)="beforeChange($event)">
+        
+            <div ngxSlickItem *ngFor="let service of services">
+                <!-- Service Item -->
+                <div class="item">
+                    <div class="inner-box">
+                        <div class="img_holder">
+                            <a routerLink="comercios">
+                                <img src="{{service.img}}" alt="images" class="img-responsive">
+                            </a>
+                        </div>
+                        <div class="image-content text-center">
+                            <span>{{service.rubro}}</span>
+                            <a routerLink="comercios">
+                                <h6>{{service.comercio}}</h6>
+                            </a>
+                            <p>{{service.text}}</p>
+                        </div>
                     </div>
                 </div>
+                <!-- Service Item -->
             </div>
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/3.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Psycology</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/1.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Dormitory</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/2.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Germs Protection</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="inner-box">
-                    <div class="img_holder">
-                        <a routerLink="comercios">
-                            <img src="assets/images/gallery/3.jpg" alt="images" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="image-content text-center">
-                        <span>Better Service At Low Cost</span>
-                        <a routerLink="comercios">
-                            <h6>Psycology</h6>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vero.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </ngx-slick-carousel>
     </div>
 </section>
 <!--End Service Section-->
