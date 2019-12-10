@@ -161,7 +161,7 @@
 <section class="service-section bg-gray section">
     <div class="container">
         <div class="section-title text-center">
-            <h3>Proveedor de 
+            <h3>Proveedor de
                 <span>Servicios</span>
             </h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. qui suscipit atque
@@ -169,10 +169,7 @@
                 fugiat officia corporis rerum eaque neque totam animi, sapiente culpa. Architecto!</p>
         </div>
 
-        <ngx-slick-carousel class="row items-container clearfix" #slickModal="slick-carousel" [config]="serviceConfig"
-            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-            (beforeChange)="beforeChange($event)">
-        
+        <ngx-slick-carousel class="row items-container clearfix" #slickModal="slick-carousel" [config]="serviceConfig">
             <div ngxSlickItem *ngFor="let service of services">
                 <!-- Service Item -->
                 <div class="item">

@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class PageTitleComponent implements OnInit {
 
   constructor() { }
+  pageTitle: string;
+  pageImage: string;
 
   ngOnInit() {
   }
